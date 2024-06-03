@@ -15,7 +15,75 @@ Tags:
 */
 
 * {
+
+}
+
+.site {
+    min-height: calc(100vh - 91px);
+}
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+}
+
+/* Menu */
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+}
+.main-menu ul {
+    list-style-type: none;
+    font-size: 20px;
+    margin: 0;
+    padding-left: 0;
+}
+.main-menu ul li {
+    display: inline-block;
+    position: relative;
+}
+.main-menu ul li a {
+    text-decoration: none !important;
+    color: black !important;
+    padding: 0 30px;
+    display: block;
+}
+/* Make one menu item unclickable */
+.unclickable > a {
+    pointer-events: none;
+}
+.main-menu ul.sub-menu {
+    position: absolute;
+    left: -45px;
+    background-color: rgb(203, 203, 203);
+    z-index: 1;
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+}
+.main-menu ul .menu-item-has-children:hover>ul,
+.main-menu ul .menu-item-has-children:focus+ul {
+    display: block;
+}
+.main-menu ul.sub-menu li {
+    width: max-content;
+    
+}
+.main-menu ul.sub-menu li a {
+    padding: 10px 20px;
+}
+
+#content {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
+}
+
+/* Footer */
+.site-footer {
+    height: 75px;
+    background-color: red;
 }

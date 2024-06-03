@@ -6,19 +6,18 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eum vel quaerat est, quisquam harum molestiae ea voluptatum quam deserunt, recusandae doloribus quasi possimus, sed neque nobis quo officiis maiores.</p>
     <div id="page" class="site">
         <!-- The header of the website -->
-        <header>
-            <section class="top-bar">
-                <div class="logo">
-                    Logo
-                </div>
-                <!-- The menu -->
-                <div class="menu-area">
-                    <nav class="main-menu">
-                        Menu
-                    </nav>
-                </div>
-            </section>
-        </header>
+            <header>
+                <section class="top-bar">
+                    <div class="logo">
+                        Logo
+                    </div>
+                    <!-- The menu -->
+                    <div class="menu-area">
+                        <nav class="main-menu">
+                            <?php wp_nav_menu( array( 'theme_location' => 'guitararchive_main_menu', 'depth' => 2 )); ?>
+                        </nav>
+                    </div>
+                </section>
+            </header>
