@@ -8,6 +8,9 @@ function guitararchive_load_scripts() {
     wp_enqueue_style( ' google-fonts', '<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">', array(), null );
+
+    // Queue the script
+    wp_enqueue_script( 'dropdown', get_template_directory_uri() . '/js/dropdown/js', array(), '1.0', true );
 }
 
 // Add an action to load the load_scripts function when the page loads
