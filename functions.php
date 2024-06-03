@@ -15,3 +15,11 @@ function guitararchive_load_scripts() {
 
 // Add an action to load the load_scripts function when the page loads
 add_action( 'wp_enqueue_scripts', 'guitararchive_load_scripts' );
+
+// Register the menus
+register_nav_menus(
+    array (
+        'guitararchive_main_menu' => 'Main Menu',
+        'guitararchive_footer_menu' => 'Footer Menu'
+    )
+);
