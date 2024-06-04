@@ -133,5 +133,50 @@ body {
         height: 55px;
     }
     /* Mobile nav */
-    
+    .main-menu ul {
+        position: absolute;
+        width: 100%;
+        background: #000000;
+        left: -999px;
+        text-align: left;
+        transition: all cubic-bezier(.79,.14,.15,.86) .5s;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+    }
+    .main-menu ul:not(.sub-menu) {
+        margin-top: 55px;
+    }
+    .main-menu ul li {
+        display: block;
+        margin: 15px 0;
+        line-height: 30px;
+    }
+    .main-menu ul li a {
+        color: white !important;
+    }
+    .unclickable a {
+        margin-top: 0px;
+    }
+    .main-menu ul.sub-menu {
+        position: relative;
+        top: 0;
+        margin-left: 30px;
+        display: block;
+        width: auto;
+    }
+    .main-menu ul.sub-menu a {
+        color: white !important;
+
+    }
+    .main-menu ul.sub-menu {
+        background-color: transparent;
+    }
+    .sub-menu li {
+        margin-bottom: 0px !important;
+    }
+    .show-dropdown {
+        left: 0 !important;
+    }
+    /* End mobile nav */
 }

@@ -10,7 +10,7 @@ function guitararchive_load_scripts() {
     // wp_enqueue_style( ' google-fonts', '')
 
     // Queue the script
-    wp_enqueue_script( 'dropdown', get_template_directory_uri() . '/js/dropdown/js', array(), '1.0', true );
+    wp_enqueue_script( 'dropdown', get_template_directory_uri() . '/js/dropdown.js', array(), '1.0', true );
 }
 
 // Add an action to load the load_scripts function when the page loads
