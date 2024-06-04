@@ -8,4 +8,5 @@ buttonClick.addEventListener( 'click', () => {
     console.log("Clicky")
     dropdown.classList.toggle( 'show-dropdown' );
     submenu.classList.toggle( 'show-dropdown' );
+    hamburger.classList.toggle( 'animate-button' );
 })
