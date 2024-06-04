@@ -14,18 +14,19 @@ Text Domain:
 Tags: 
 */
 
+body {
+    margin: 0;
+}
 .site {
     min-height: calc(100vh - 91px);
 }
-
 .top-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-family: "Anton", sans-serif;
+    font-family: "Anton", sans-serif !important;
     text-transform: uppercase;
 }
-
 /* Menu */
 .main-menu {
     display: flex;
@@ -33,10 +34,11 @@ Tags:
 }
 .main-menu ul {
     list-style-type: none;
-    font-size: 20px;
+    font-size: 25px;
     margin: 0;
     padding-left: 0;
 }
+
 .main-menu ul li {
     display: inline-block;
     position: relative;
@@ -47,9 +49,8 @@ Tags:
     padding: 0 30px;
     display: block;
 }
-/* Make one menu item unclickable */
-.unclickable > a { 
-    pointer-events: none;
+.main-menu ul li a:hover {
+    color: grey !important;
 }
 /* Pop-out menu */
 .main-menu ul.sub-menu {
@@ -58,7 +59,6 @@ Tags:
     z-index: 1;
     text-align: left;
     display: none;
-
 }
 .main-menu ul .menu-item-has-children:hover>ul,
 .main-menu ul .menu-item-has-children:focus+ul {
@@ -75,12 +75,33 @@ Tags:
 /* Page content */
 #content {
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
 }
 
 /* Footer */
 .site-footer {
     height: 75px;
-    background-color: red;
+    font-size: 18px;
+    background-color: rgb(236, 236, 236);
+    font-family: "Anton", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid black;
+    padding: 0 20px;;
+}
+.footer-menu ul li {
+    display: inline-block;
+    position: relative;
+}
+.footer-menu ul li a {
+    color: black !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+.footer-menu ul li a:hover {
+    color: grey !important;
 }
