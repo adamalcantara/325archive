@@ -13,7 +13,24 @@
                     </section>
                     <!-- Home blog -->
                     <section class="home-blog">
-                        Home Blog
+                        <h1 id="home-blog-header">The Latest From The Blog</h1>
+                        <div class="blog-items">
+                            <!-- The WordPress loop -->
+                            <?php 
+                                if( have_posts() ):
+                                    while( have_posts() ) : the_post();
+                                    ?>
+                                    <article class="home-blog-item">
+                                        <p><?php echo get_the_date(); ?></p>
+                                        <h2><?php the_title(); ?></h2>
+                                        <?php the_content(); ?>
+                                    </article>
+                                    <?php
+                                endwhile;
+                            else: ?>
+                                <p>Nothing yet to be displayed</p>
+                            <?php endif; ?>
+                        </div>
                     </section>
                 </main>
             </div>
