@@ -5,9 +5,9 @@ function guitararchive_load_scripts() {
     wp_enqueue_style( 'guitararchive-style', get_stylesheet_uri(), array(), filemtime( get_template_directory() . '/style.css' ), 'all' );
 
     // Queue the fonts from Google fonts
-    wp_enqueue_style( ' google-fonts', '<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">', array(), null );
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100;300;400;500;900&display=swap', array(), null );
+
+    // wp_enqueue_style( ' google-fonts', '')
 
     // Queue the script
     wp_enqueue_script( 'dropdown', get_template_directory_uri() . '/js/dropdown/js', array(), '1.0', true );

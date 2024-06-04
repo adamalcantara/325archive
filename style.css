@@ -14,10 +14,6 @@ Text Domain:
 Tags: 
 */
 
-* {
-
-}
-
 .site {
     min-height: calc(100vh - 91px);
 }
@@ -27,7 +23,7 @@ Tags:
     flex-direction: row;
     justify-content: space-between;
     font-family: "Anton", sans-serif;
-    font-weight: 400;
+    text-transform: uppercase;
 }
 
 /* Menu */
@@ -52,17 +48,17 @@ Tags:
     display: block;
 }
 /* Make one menu item unclickable */
-.unclickable > a {
+.unclickable > a { 
     pointer-events: none;
 }
+/* Pop-out menu */
 .main-menu ul.sub-menu {
     position: absolute;
-    left: -45px;
     background-color: rgb(203, 203, 203);
     z-index: 1;
     text-align: left;
-    display: block;
-    margin-top: 10px;
+    display: none;
+
 }
 .main-menu ul .menu-item-has-children:hover>ul,
 .main-menu ul .menu-item-has-children:focus+ul {
@@ -76,6 +72,7 @@ Tags:
     padding: 10px 20px;
 }
 
+/* Page content */
 #content {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
