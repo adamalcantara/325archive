@@ -36,6 +36,13 @@ function guitararchive_config() {
     // Theme support for custom post thumbnails
     add_theme_support( 'post-thumbnails' );
 
+    add_theme_support( 'custom_logo', array(
+        'flex-width' => true,
+        'width' => 200,
+        'flex-height' => true,
+        'height' => 110,
+    ) );
+
 }
 
 // Call the config function after the theme is loaded
