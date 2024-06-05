@@ -26,7 +26,12 @@
                                 <p>Nothing yet to be displayed</p>
                             <?php endif; ?>
                         </div>
-                        <?php get_sidebar(); ?>
+                        <div class="the-blog-aside">
+                            <div class="searchbox">
+                                <?php get_search_form(); ?>
+                            </div>
+                            <?php get_sidebar(); ?>
+                        </div>
                     </section>
                 </main>
             </div>
