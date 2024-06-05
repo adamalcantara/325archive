@@ -17,21 +17,29 @@ Tags:
 body {
     margin: 0;
 }
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: #cbcbcb;
+}
 .site {
     min-height: calc(100vh - 91px);
 }
 .top-bar {
+    height: 75px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     font-family: "Anton", sans-serif !important;
     text-transform: uppercase;
 }
 /* Logo */
 .logo a {
-    color: black;
-    text-decoration: none;
     font-size: 25px;
+    margin-left: 30px;
 }
 /* Menu */
 .main-menu {
@@ -140,13 +148,22 @@ img {
 }
 .home-blog-items {
     display: grid;
-    grid-template-areas: 'feat-item feat-item';
+    grid-template-columns: 1fr 1fr;
     grid-gap: 25px;
+    width: 100%;
 }
 #home-blog-header {
+    font-size: 40px;
     text-transform: uppercase;
     font-family: "Anton", "sans-serif";
     text-align: center;
+}
+.home-blog-item img {
+    width: 50%;
+}
+.home-blog-item img:hover {
+    opacity: 0.7;
+    transition: ease 0.5s;
 }
 
 /* BLOG */
