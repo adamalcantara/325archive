@@ -33,6 +33,8 @@ function guitararchive_config() {
         'width' => 3000,
     );
     add_theme_support( 'custom-header', $args );
+    // Theme support for custom post thumbnails
+    add_theme_support( 'post-thumbnails' );
 
 }
 

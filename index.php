@@ -17,6 +17,7 @@
                                     <article class="home-blog-item">
                                         <p class="blog-date"><?php echo get_the_date(); ?></p>
                                         <h2><?php the_title(); ?></h2>
+                                        <?php the_post_thumbnail(); ?>
                                         <?php the_content(); ?>
                                     </article>
                                     <?php

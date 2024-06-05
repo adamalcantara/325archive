@@ -124,6 +124,16 @@ img {
 .blog-date {
     text-transform: uppercase;
 }
+.blog-items {
+    width: 80%;
+}
+.home-blog-item img {
+    filter: saturate(0);
+}
+.home-blog-item img:hover {
+    filter: saturate(100%);
+    transition: ease .5s;
+}
 
 /* Footer */
 .site-footer {
