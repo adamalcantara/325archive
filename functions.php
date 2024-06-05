@@ -16,10 +16,25 @@ function guitararchive_load_scripts() {
 // Add an action to load the load_scripts function when the page loads
 add_action( 'wp_enqueue_scripts', 'guitararchive_load_scripts' );
 
-// Register the menus
-register_nav_menus(
-    array (
-        'guitararchive_main_menu' => 'Main Menu',
-        'guitararchive_footer_menu' => 'Footer Menu'
-    )
-);
+
+function guitararchive_config() {
+    // Register the menus
+    register_nav_menus(
+        array (
+            'guitararchive_main_menu' => 'Main Menu',
+            'guitararchive_footer_menu' => 'Footer Menu'
+        )
+    );
+
+    $args = array(
+        'flex-height' => true,
+        'height' => 200,
+        'flex-width' => true,
+        'width' => 3000,
+    );
+    add_theme_support( 'custom-header', $args );
+
+}
+
+// Call the config function after the theme is loaded
+add_action( 'after_setup_theme', 'guitararchive_config', 0);

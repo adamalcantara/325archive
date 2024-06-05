@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+
+<img class="header-img" src="<?php header_image(); ?>" height="<?php echo absint(get_custom_header()->height ); ?>" width="<?php echo absint(get_custom_header()->width ); ?>" alt="" />
+
         <!-- Dynamic content area -->
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
@@ -12,7 +15,7 @@
                                     while( have_posts() ) : the_post();
                                     ?>
                                     <article class="home-blog-item">
-                                        <p><?php echo get_the_date(); ?></p>
+                                        <p class="blog-date"><?php echo get_the_date(); ?></p>
                                         <h2><?php the_title(); ?></h2>
                                         <?php the_content(); ?>
                                     </article>
