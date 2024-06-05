@@ -14,7 +14,7 @@
                                 if( have_posts() ):
                                     while( have_posts() ) : the_post();
                                     ?>
-                                    <article class="home-blog-item">
+                                    <article class="blog-item">
                                         <p class="blog-date"><?php echo get_the_date(); ?></p>
                                         <h2><?php the_title(); ?></h2>
                                         <?php the_post_thumbnail( 'full' ); ?>
@@ -26,6 +26,7 @@
                                 <p>Nothing yet to be displayed</p>
                             <?php endif; ?>
                         </div>
+                        <?php get_sidebar(); ?>
                     </section>
                 </main>
             </div>

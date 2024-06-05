@@ -30,20 +30,35 @@ function guitararchive_config() {
         'flex-height' => true,
         'height' => 200,
         'flex-width' => true,
-        'width' => 3000,
+        'width' => 3000
     );
     add_theme_support( 'custom-header', $args );
     // Theme support for custom post thumbnails
     add_theme_support( 'post-thumbnails' );
 
-    add_theme_support( 'custom_logo', array(
-        'flex-width' => true,
+    add_theme_support( 'custom-logo', array(
         'width' => 200,
-        'flex-height' => true,
-        'height' => 110,
+        'height'    => 110,
+        'flex-height'   => true,
+        'flex-width'    => true
     ) );
 
 }
 
 // Call the config function after the theme is loaded
 add_action( 'after_setup_theme', 'guitararchive_config', 0);
+
+add_action( 'widgets_init', 'guitararchive_sidebars' );
+function guitararchive_sidebars(){
+    register_sidebar(
+        array(
+            'name' => 'Blog Sidebar',
+            'id' => 'sidebar-blog',
+            'description' => 'This is the sidebar for the blog page.',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'
+        )
+    );
+}

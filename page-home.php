@@ -12,7 +12,7 @@
                         Mission
                     </section>
                     <!-- Home blog -->
-                    <section class="main-blog">
+                    <section class="home-blog">
                         <div class="blog-items">
                             <!-- The WordPress loop -->
                             <?php 

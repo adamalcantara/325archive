@@ -108,6 +108,9 @@ img {
 }
 
 /* PAGE HEADERS */
+.header-img {
+    width: 100% !important;
+}
 .page-header {
     font-size: 50px;
     text-transform: uppercase;
@@ -116,27 +119,49 @@ img {
 }
 
 /* HOME PAGE */
-.main-blog {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 #home-blog-header {
     text-transform: uppercase;
     font-family: "Anton", "sans-serif";
 }
 
 /* BLOG */
+.main-blog {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
 .blog-date {
     text-transform: uppercase;
 }
 .blog-items {
-    width: 80%;
+    flex: 1;
 }
-.home-blog-item img {
+.sidebar {
+    width: 30%;
+    margin-left: 60px;
+    background: rgb(236, 236, 236);
+    padding: 0 25px 15px 25px;
+    height: 100%;
+}
+.widget-wrapper h4 {
+    font-size: 25px;
+}
+.widget-wrapper a {
+    color: black !important;
+    text-decoration: none;
+}
+.blog-item {
+    margin-bottom: 50px;
+}
+.blog-item h2 {
+    font-size: 35px;
+    margin-top: 0px;
+}
+.blog-item img {
     filter: saturate(0);
 }
-.home-blog-item img:hover {
+.blog-item img:hover {
     filter: saturate(100%);
     transition: ease .5s;
 }
@@ -235,5 +260,19 @@ img {
     .animate-button .bar3 {
         -webkit-transform: rotate(45deg) translate(-7px, -7px);
         transform: rotate(45deg) translate(-7px, -7px);
+    }
+
+    /* BLOG MEDIA QUERY */
+    .main-blog {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100% !important;
+        margin-left: 0px !important;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .widget-wrapper {
+        margin-left: 20px;
     }
 }
