@@ -9,7 +9,11 @@
                     </section>
                     <!-- Mission section -->
                     <section class="mission">
-                        Mission
+                        <?php 
+                            if( is_active_sidebar( 'sidebar-mission' )){
+                                dynamic_sidebar( 'sidebar-mission' );
+                            }
+                        ?>
                     </section>
                     <!-- Home blog -->
                     <section class="home-blog">

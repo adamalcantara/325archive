@@ -61,4 +61,15 @@ function guitararchive_sidebars(){
             'after_title' => '</h4>'
         )
     );
+    register_sidebar(
+        array(
+            'name' => 'Mission',
+            'id' => 'sidebar-mission',
+            'description' => 'This is the mission section of the home page.',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'
+        )
+    );
 }
