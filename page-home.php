@@ -17,23 +17,36 @@
                     </section>
                     <!-- Home blog -->
                     <section class="home-blog">
-                        <div class="blog-items">
-                            <!-- The WordPress loop -->
-                            <?php 
-                                if( have_posts() ):
-                                    while( have_posts() ) : the_post();
-                                    ?>
-                                    <article class="home-blog-item">
-                                        <p><?php echo get_the_date(); ?></p>
-                                        <h2><?php the_title(); ?></h2>
-                                        <?php the_content(); ?>
-                                    </article>
-                                    <?php
-                                endwhile;
-                            else: ?>
-                                <p>Nothing yet to be displayed</p>
-                            <?php endif; ?>
-                        </div>
+                            <h2 id="home-blog-header">Latest Articles</h2>
+                            <div class="home-blog-items">
+                                <!-- The WordPress loop -->
+                                <?php 
+                                $args = array(
+                                    'post_type' => 'post',
+                                    'posts_per_page' => 3,
+                                    // Categories to go on homepage, and not
+                                    'category_in' => array(),
+                                    'category_not_in' => array(),
+                                );
+    
+                                $postlist = new WP_Query( $args );
+                                    if( $postlist->have_posts() ):
+                                        while( $postlist->have_posts() ) : $postlist->the_post();
+                                        ?>
+                                        <article class="home-blog-item">
+                                            <p class="blog-date"><?php echo get_the_date(); ?></p>
+                                            <h2 class="blog-title"><?php the_title(); ?></h2>
+                                            <?php the_post_thumbnail( 'full' ) ?>
+                                            <?php the_excerpt(); ?>
+                                        </article>
+                                        <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                else: ?>
+                                    <p>Nothing yet to be displayed</p>
+                                <?php endif; ?>
+                            </div>
+
                     </section>
                 </main>
             </div>

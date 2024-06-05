@@ -138,10 +138,16 @@ img {
 .mission a:hover {
     background-color: #cbcbcb;
 }
-/* #home-blog-header {
+.home-blog-items {
+    display: grid;
+    grid-template-areas: 'feat-item feat-item';
+    grid-gap: 25px;
+}
+#home-blog-header {
     text-transform: uppercase;
     font-family: "Anton", "sans-serif";
-} */
+    text-align: center;
+}
 
 /* BLOG */
 .main-blog {
@@ -151,6 +157,10 @@ img {
 }
 .blog-date {
     text-transform: uppercase;
+}
+.blog-title {
+    font-size: 35px;
+    margin-top: 0px;
 }
 .blog-items {
     flex: 1;
@@ -172,10 +182,7 @@ img {
 .blog-item {
     margin-bottom: 50px;
 }
-.blog-item h2 {
-    font-size: 35px;
-    margin-top: 0px;
-}
+
 .blog-item img {
     filter: saturate(0);
 }

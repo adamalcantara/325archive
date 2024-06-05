@@ -16,7 +16,7 @@
                                     ?>
                                     <article class="blog-item">
                                         <p class="blog-date"><?php echo get_the_date(); ?></p>
-                                        <h2><?php the_title(); ?></h2>
+                                        <h2 class="blog-title"><?php the_title(); ?></h2>
                                         <?php the_post_thumbnail( 'full' ); ?>
                                         <?php the_content(); ?>
                                     </article>
