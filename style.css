@@ -146,11 +146,13 @@ img {
 .mission a:hover {
     background-color: #cbcbcb;
 }
+.home-blog-items article:first-child {
+    grid-area: 'feat-item';
+}
 .home-blog-items {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'feat-item feat-item';
     grid-gap: 25px;
-    width: 100%;
 }
 #home-blog-header {
     font-size: 40px;
@@ -176,6 +178,8 @@ img {
     text-transform: uppercase;
 }
 .blog-title {
+    text-transform: uppercase;
+    font-family: "Anton", sans-serif;
     font-size: 35px;
     margin-top: 0px;
 }
@@ -206,6 +210,58 @@ img {
 .blog-item img:hover {
     filter: saturate(100%);
     transition: ease .5s;
+}
+
+/* COMMENTS AREA */
+.comments-area {
+    width: 60%;
+    border-top: 0.5px solid #c3c3c3;
+    margin-top: 50px;
+}
+.comments-title, .comment-reply-title {
+    text-transform: uppercase;
+    font-family: "Anton", sans-serif;
+    font-size: 25px;
+}
+.comment-form p:nth-child(2), 
+.comment-form p:nth-child(3),
+.comment-form p:nth-child(4),
+.comment-form p:nth-child(5) {
+    display: flex;
+    flex-direction: column;
+}
+.comment-form p textarea, input {
+    border: 0.5px solid #c3c3c3;
+    font-family: "Roboto", sans-serif;
+}
+.form-submit input {
+    padding: 10px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    background-color: #b4b4b4;
+    width: max-content;
+}
+.form-submit input:hover {
+    background-color: #dadada;
+    cursor: pointer;
+}
+.comment-list {
+    list-style-type: none;
+}
+.comment-list li {
+    margin-bottom: 30px;
+}
+.comment-author {
+    font-size: 20px;
+}
+.comment-list div:nth-child(2) {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.comment-list div:nth-child(3) {
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 /* Footer */
@@ -302,6 +358,11 @@ img {
     .animate-button .bar3 {
         -webkit-transform: rotate(45deg) translate(-7px, -7px);
         transform: rotate(45deg) translate(-7px, -7px);
+    }
+
+    /* HOMEPAGE */
+    .home-blog-items {
+        grid-template-columns: 1fr;
     }
 
     /* BLOG MEDIA QUERY */

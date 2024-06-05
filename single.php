@@ -9,10 +9,8 @@
                     ?>
                         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                             <header>
-                                <h1><?php the_title(); ?></h1>
-                                <div class="meta-info">
-                                    <p><?php echo get_the_date(); ?></p>
-                                </div>
+                                <p class="blog-date"><?php echo get_the_date(); ?></p>
+                                <h1 class="blog-title"><?php the_title(); ?></h1>
                                 <div class="content">
                                     <?php the_content(); ?>
                                 </div>
@@ -23,6 +21,10 @@
                             </header>
                         </article>
                     <?php
+                    // Check if there are comments open, then display them
+                    if( comments_open() || get_comments_number() ) {
+                        comments_template();
+                    }
                 endwhile;
             ?>
         </div>
