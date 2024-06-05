@@ -3,7 +3,15 @@
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <h1 class="page-header">Blog</h1>
+                    <!-- Hero element -->
+                    <section class="hero">
+                        Hero
+                    </section>
+                    <!-- Mission section -->
+                    <section class="mission">
+                        Mission
+                    </section>
+                    <!-- Home blog -->
                     <section class="main-blog">
                         <div class="blog-items">
                             <!-- The WordPress loop -->

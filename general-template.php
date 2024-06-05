@@ -1,10 +1,15 @@
+<?php 
+/*
+Template Name: General Template
+*/
+?>
+
 <?php get_header(); ?>
         <!-- Dynamic content area -->
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <h1 class="page-header">Blog</h1>
-                    <section class="main-blog">
+                    <div class="general-template">
                         <div class="blog-items">
                             <!-- The WordPress loop -->
                             <?php 
@@ -12,8 +17,7 @@
                                     while( have_posts() ) : the_post();
                                     ?>
                                     <article class="home-blog-item">
-                                        <p><?php echo get_the_date(); ?></p>
-                                        <h2><?php the_title(); ?></h2>
+                                        <h1 class="page-header"><?php the_title(); ?></h1>
                                         <?php the_content(); ?>
                                     </article>
                                     <?php
@@ -22,7 +26,8 @@
                                 <p>Nothing yet to be displayed</p>
                             <?php endif; ?>
                         </div>
-                    </section>
+                    </div>
+
                 </main>
             </div>
         </div>
