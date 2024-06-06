@@ -18,13 +18,37 @@ Template Name: Guitar Template
                                     ?>
                                     <article class="home-blog-item">
                                         <h1 class="page-header"><?php the_title(); ?></h1>
-                                        <?php the_content(); ?>
                                     </article>
                                     <?php
                                 endwhile;
                             else: ?>
                                 <p>Nothing yet to be displayed</p>
                             <?php endif; ?>
+                            <!-- The blog content for guitars -->
+                            <section class="guitar-page">
+                                <div class="guitar-page-items">
+                                    <!-- The WordPress loop -->
+                                    <?php 
+                                    $args = array(
+                                        'post_type' => 'page',
+                                        'posts_per_page' => 100,
+                                        // Categories to go on homepage, and not
+                                        'post__in' => array(99, 97, 105),
+                                        'orderby' => 'title',
+                                        'order' => 'ASC'
+                                    );
+        
+                                    $postlist = new WP_Query( $args );
+                                        if( $postlist->have_posts() ):
+                                            while( $postlist->have_posts() ) : $postlist->the_post();
+                                        get_template_part( 'parts/content', 'guitar-template' );
+                                        endwhile;
+                                        wp_reset_postdata();
+                                    else: ?>
+                                        <p>Nothing yet to be displayed</p>
+                                    <?php endif; ?>
+                                </div>
+                            </section>
                         </div>
                     </div>
 

@@ -151,7 +151,7 @@ img {
 }
 .home-blog-items {
     display: grid;
-    grid-template-areas: 'feat-item feat-item';
+    grid-template-areas: 'feat-item feat-item feat-item feat-item';
     grid-gap: 25px;
 }
 #home-blog-header {
@@ -161,7 +161,7 @@ img {
     text-align: center;
 }
 .home-blog-item img {
-    width: 50%;
+    width: 100%;
 }
 .home-blog-item img:hover {
     opacity: 0.7;
@@ -335,19 +335,37 @@ img {
     text-transform: uppercase;
 }
 
-
+/* GUITAR TEMPLATE */
+.guitar-title {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 40px;
+}
+.guitar-page-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+}
+.guitar-item img {
+    filter: saturate(0);
+}
+.guitar-item img:hover {
+    filter: saturate(1);
+    transition: ease .5s;
+}
 
 /* Footer */
 .site-footer {
     height: 75px;
     font-size: 18px;
-    background-color: rgb(236, 236, 236);
     font-family: "Anton", sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-top: 2px solid black;
+    border-top: 0.5px solid #c3c3c3;
     padding: 0 20px;;
 }
 .footer-menu ul li {
@@ -453,6 +471,12 @@ img {
     }
     .comments-area {
         width: 100%;
+    }
+
+    /* GUITAR TEMPLATE MEDIA QUERY */
+    .guitar-page-items {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
     }
 }
 
