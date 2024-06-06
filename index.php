@@ -22,6 +22,17 @@
                                     </article>
                                     <?php
                                 endwhile;
+                                ?>
+                                <!-- Pagination -->
+                                <div class="guitararchive-pagination">
+                                    <div class="pages new">
+                                        <?php previous_posts_link( "< Newer Posts") ?>
+                                    </div>
+                                    <div class="pages old">
+                                        <?php next_posts_link( "Older Posts >") ?>
+                                    </div>
+                                </div>
+                                <?php
                             else: ?>
                                 <p>Nothing yet to be displayed</p>
                             <?php endif; ?>

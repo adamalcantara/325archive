@@ -213,7 +213,7 @@ img {
     transition: ease .5s;
 }
 
-/* Search */
+/* SEARCH FORM */
 .searchbox {
     margin-bottom: 10px;
     width: 100%;
@@ -234,6 +234,43 @@ img {
 #searchsubmit:hover {
     background-color: #dadada;
     cursor: pointer;
+}
+
+/* PAGINATION */
+.guitararchive-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.pages {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+/* SEARCH PAGINATION */
+.pagination {
+    margin-bottom: 20px;
+}
+.page-numbers {
+    padding: 10px 15px;
+    display: inline-block;
+    background-color:#cbcbcb;
+}
+.page-numbers:hover {
+    background-color: rgb(50, 50, 50);
+}
+.nav-links {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.nav-links .current {
+    background-color: black;
+    color: white;
+}
+.nav-links .next,
+.nav-links .prev{
+    background-color: transparent;
 }
 
 /* COMMENTS AREA */
