@@ -43,6 +43,8 @@ function guitararchive_config() {
         'flex-width'    => true
     ) );
 
+    // Change the title displayed in the upper tab
+    add_theme_support( 'title-tag' );
 }
 
 // Call the config function after the theme is loaded
