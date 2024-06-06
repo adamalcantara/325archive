@@ -199,9 +199,8 @@ img {
 .home-blog-items {
     display: grid;
     grid-template-areas: 'feat-item . .';
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 25px;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-auto-flow: column;
 }
 #home-blog-header {
     font-size: 40px;
@@ -514,7 +513,11 @@ img {
         font-size: 9vw;
     }
     .home-blog-items {
-        grid-template-areas: 'feat-item' !important;
+        grid-template-areas: 
+        'feat-item'
+        'feat-item'
+        'feat-item';
+        grid-template-columns: 1fr;
     }
 
     /* BLOG MEDIA QUERY */
