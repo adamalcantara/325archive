@@ -20,6 +20,15 @@
                                 </div>
                             </header>
                         </article>
+                        <!-- Pagination -->
+                        <div class="guitararchive-pagination">
+                                    <div class="pages next">
+                                        <?php next_post_link( '< %link' ) ?>
+                                    </div>
+                                    <div class="pages previous">
+                                        <?php previous_post_link( '%link >' ) ?>
+                                    </div>
+                                </div>
                     <?php
                     // Check if there are comments open, then display them
                     if( comments_open() || get_comments_number() ) {
