@@ -119,7 +119,7 @@ img {
 .header-img {
     width: 100% !important;
 }
-.page-header {
+.page-header, .archive-title {
     font-size: 50px;
     text-transform: uppercase;
     font-family: "Anton", "sans-serif";
@@ -177,13 +177,7 @@ img {
 .blog-date {
     text-transform: uppercase;
 }
-.blog-title {
-    text-transform: uppercase;
-    font-family: "Anton", sans-serif;
-    font-size: 35px;
-    margin-top: 0px;
-}
-.blog-items {
+.blog-items, .archive-items {
     flex: 1;
 }
 .the-blog-aside {
@@ -211,6 +205,15 @@ img {
 .blog-item img:hover {
     filter: saturate(100%);
     transition: ease .5s;
+}
+.archive-title {
+    margin-bottom: 0px;
+}
+.archive-description p {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 0px;
+    font-size: 20px;
 }
 
 /* SEARCH FORM */
