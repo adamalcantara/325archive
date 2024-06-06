@@ -1,12 +1,20 @@
 <?php get_header(); ?>
+<!-- Hero element -->
+<section class="hero" style="background-image: url(http://325archive.local/wp-content/uploads/2024/06/pexels-aaronsvd-12544-scaled.jpg)">
+    <div class="overlay" style="min-height: 800px">
+        <div class="hero-container">
+
+                <h1>The 325 Archive</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <a href="#">Learn The History</a>
+
+        </div>
+    </div>
+</section>
         <!-- Dynamic content area -->
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <!-- Hero element -->
-                    <section class="hero">
-                        Hero
-                    </section>
                     <!-- Mission section -->
                     <section class="mission">
                         <?php 

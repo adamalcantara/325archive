@@ -126,6 +126,52 @@ img {
     text-align: center;
 }
 
+/* HERO */
+.hero {
+    background-size: cover;
+    background-position: center center;
+}
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.689);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    height: auto !important;
+}
+.hero-container h1 {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    font-size: 7vw;
+    margin-bottom: 0px !important;
+}
+.hero-container p {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+.hero-container a {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white !important;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 20px;
+}
+.hero-container a:hover {
+    color: #c3c3c3 !important;
+    border:  2px solid #c3c3c3;
+}
+
 /* HOME PAGE */
 .mission {
     display: flex;
@@ -147,12 +193,15 @@ img {
     background-color: #cbcbcb;
 }
 .home-blog-items article:first-child {
-    grid-area: 'feat-item';
+    grid-area: feat-item;
+
 }
 .home-blog-items {
     display: grid;
-    grid-template-areas: 'feat-item feat-item feat-item feat-item';
+    grid-template-areas: 'feat-item . .';
     grid-gap: 25px;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
 }
 #home-blog-header {
     font-size: 40px;
@@ -382,6 +431,12 @@ img {
     color: grey !important;
 }
 
+@media (max-width: 1000px) {
+    .main-menu ul li a {
+        padding: 0 15px;
+    }
+}
+
 /* Mobile media query */
 @media (max-width: 767px) {
     .menu-icon, .check-button {
@@ -452,8 +507,14 @@ img {
     }
 
     /* HOMEPAGE */
+    .hero-container {
+        width: 75%;
+    }
+    .hero-container h1 {
+        font-size: 9vw;
+    }
     .home-blog-items {
-        grid-template-columns: 1fr;
+        grid-template-areas: 'feat-item' !important;
     }
 
     /* BLOG MEDIA QUERY */
