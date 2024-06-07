@@ -4,9 +4,9 @@
     <div class="overlay" style="min-height: 800px">
         <div class="hero-container">
 
-                <h1>The 325 Archive</h1>
+                <h1>325 Archive</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                <a href="#">Learn The History</a>
+                <a href="http://325archive.local/1958-guitars/">View The Guitars</a>
 
         </div>
     </div>
