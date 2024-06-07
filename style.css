@@ -179,6 +179,7 @@ img {
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    margin: 50px 0px;
 }
 .mission a {
     background-color: transparent;
@@ -192,9 +193,17 @@ img {
 .mission a:hover {
     background-color: #cbcbcb;
 }
+.home-blog {
+    margin: 50px 0px;
+}
 .home-blog-items article:first-child {
     grid-area: feat-item;
-
+}
+.home-blog-title {
+    font-size: 35px;
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    margin-top: 0px;
 }
 .home-blog-items {
     display: grid;
@@ -430,6 +439,12 @@ img {
     color: grey !important;
 }
 
+@media (max-width: 1100px) {
+    .home-blog-title {
+        font-size: 3vw;
+    }
+}
+
 @media (max-width: 1000px) {
     .main-menu ul li a {
         padding: 0 15px;
@@ -511,6 +526,9 @@ img {
     }
     .hero-container h1 {
         font-size: 9vw;
+    }
+    .home-blog-title {
+        font-size: 35px;
     }
     .home-blog-items {
         grid-template-areas: 
