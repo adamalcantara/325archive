@@ -47,6 +47,8 @@ function guitararchive_config() {
 
     // Change the title displayed in the upper tab
     add_theme_support( 'title-tag' );
+
+
 }
 
 // Call the config function after the theme is loaded
@@ -83,3 +85,9 @@ if( ! function_exists( 'wp_body_open' ) ) {
         do_action( 'wp_body_open' );
     }
 }
+
+function guitararchive_custom_excerpt_length( $length ) {
+    return 20;
+}
+
+add_filter( 'excerpt_length', 'guitararchive_custom_excerpt_length', 999 );
