@@ -150,7 +150,7 @@ img {
     font-family: "Anton", sans-serif;
     text-transform: uppercase;
     font-size: 7vw;
-    margin-bottom: 0px !important;
+    margin: 0px !important;
 }
 .hero-container p {
     font-family: "Roboto", sans-serif;
