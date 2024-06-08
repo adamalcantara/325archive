@@ -1,5 +1,8 @@
 <?php 
 
+// Get the customizer
+require get_template_directory() .'/inc/customizer.php';
+
 function guitararchive_load_scripts() {
     // Queue the stylesheet
     wp_enqueue_style( 'guitararchive-style', get_stylesheet_uri(), array(), filemtime( get_template_directory() . '/style.css' ), 'all' );

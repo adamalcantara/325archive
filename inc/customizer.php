@@ -129,4 +129,4 @@ function guitararchive_customizer( $wp_customize ) {
     
 }
 
-?>
+add_action( 'customize_register', 'guitararchive_customizer' );
