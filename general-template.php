@@ -19,7 +19,7 @@ Template Name: General Template
                                 if( have_posts() ):
                                     while( have_posts() ) : the_post();
                                     ?>
-                                    <article class="home-blog-item">
+                                    <article class="general-template-item">
                                         <h1 class="page-header"><?php the_title(); ?></h1>
                                         <?php the_content(); ?>
                                     </article>
