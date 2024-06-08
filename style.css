@@ -165,7 +165,7 @@ img {
     border-radius: 8px;
     background-color: transparent;
     border: 2px solid white;
-    font-size: 20px;
+    font-size: 25px;
 }
 .hero-container a:hover {
     color: #c3c3c3 !important;
@@ -188,7 +188,7 @@ img {
     border-radius: 8px;
     font-family: "Anton", sans-serif;
     text-transform: uppercase;
-    font-weight: 500;
+    font-size: 25px;
 }
 .mission a:hover {
     background-color: #cbcbcb;
@@ -438,6 +438,9 @@ img {
 .footer-menu ul li a:hover {
     color: grey !important;
 }
+.copyright p {
+    margin: 0px;
+}
 
 @media (max-width: 1100px) {
     .home-blog-title {
@@ -448,6 +451,9 @@ img {
 @media (max-width: 1000px) {
     .main-menu ul li a {
         padding: 0 15px;
+    }
+    .site-footer {
+        font-size: 1.5vw;
     }
 }
 
@@ -559,6 +565,12 @@ img {
     .guitar-page-items {
         grid-template-columns: 1fr;
         grid-gap: 10px;
+    }
+
+    /* FOOTER */
+    .site-footer {
+        height: 50px;
+        font-size: 1vw;
     }
 }
 
