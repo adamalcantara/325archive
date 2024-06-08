@@ -1,6 +1,61 @@
 <?php 
 
 function guitararchive_customizer( $wp_customize ) {
+    // Copyright Section
+    $wp_customize->add_section(
+        'sec_copyright',
+        array(
+            'title' => __( 'Copyright Settings', 'guitararchive' ),
+            'description' => __( 'Copyright Settings', 'guitararchive' )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'set_copyright',
+        array(
+            'type' => 'theme_mod',
+            'default' => __( 'Copyright X - All Rights Reserved', 'guitararchive'),
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+
+    $wp_customize->add_control(
+        'set_copyright',
+        array(
+            'label' => __( 'Copyright Information', 'guitararchive'),
+            'description' => __( 'Please, type your copyright here', 'guitararchive'),
+            'section' => 'sec_copyright',
+            'type' => 'text'
+        )
+    );
+
+    // Disclaimer
+    $wp_customize->add_section(
+        'sec_disclaimer',
+        array(
+            'title' => __( 'Disclaimer Settings', 'guitararchive' ),
+            'description' => __( 'Disclaimer Settings', 'guitararchive' )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'set_disclaimer',
+        array(
+            'type' => 'theme_mod',
+            'default' => __( 'A disclaimer', 'guitararchive'),
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+
+    $wp_customize->add_control(
+        'set_disclaimer',
+        array(
+            'label' => __( 'Disclaimer Information', 'guitararchive'),
+            'description' => __( 'Please, type your disclaimer here', 'guitararchive'),
+            'section' => 'sec_disclaimer',
+            'type' => 'text'
+        )
+    );
 
     // Hero section
     $wp_customize->add_section(
