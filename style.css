@@ -266,7 +266,7 @@ img {
     filter: saturate(0);
 }
 .blog-item img:hover {
-    filter: saturate(100%);
+    filter: saturate(1);
     transition: ease .5s;
 }
 .archive-title {
@@ -560,11 +560,17 @@ img {
     .comments-area {
         width: 100%;
     }
+    .blog-item img {
+        filter: saturate(1);
+    }
 
     /* GUITAR TEMPLATE MEDIA QUERY */
     .guitar-page-items {
         grid-template-columns: 1fr;
         grid-gap: 10px;
+    }
+    .guitar-item img {
+        filter: saturate(1);
     }
 
     /* FOOTER */

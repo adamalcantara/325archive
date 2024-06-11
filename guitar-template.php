@@ -33,7 +33,7 @@ Template Name: Guitar Template
                                         'post_type' => 'page',
                                         'posts_per_page' => 100,
                                         // Categories to go on homepage, and not
-                                        'post__in' => array(99, 97, 105),
+                                        'post__in' => array(99, 97, 105, 120, 123),
                                         'orderby' => 'title',
                                         'order' => 'ASC'
                                     );
