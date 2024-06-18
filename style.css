@@ -442,6 +442,12 @@ img {
     margin: 0px;
 }
 
+@media (max-width: 1400px) {
+    .main-blog {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 1100px) {
     .home-blog-title {
         font-size: 3vw;
@@ -545,9 +551,6 @@ img {
     }
 
     /* BLOG MEDIA QUERY */
-    .main-blog {
-        flex-direction: column;
-    }
     .sidebar {
         width: 100% !important;
         margin-left: 0px !important;
