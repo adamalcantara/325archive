@@ -418,6 +418,9 @@ img {
     filter: saturate(1);
     transition: ease .5s;
 }
+.guitar-page-item {
+    margin-bottom: 40px;
+}
 
 /* Footer */
 .site-footer {
