@@ -218,12 +218,28 @@ img {
     font-family: "Anton", "sans-serif";
     text-align: center;
 }
+.home-blog-item {
+    height: 100%;
+    border: 0.1px solid #e6e6e6;
+    box-shadow: 0 0 10px #9e9e9e15;
+    position: relative;
+}
 .home-blog-item img {
     width: 100%;
 }
 .home-blog-item img:hover {
     opacity: 0.7;
     transition: ease 0.5s;
+}
+.home-blog-info {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.home-blog-date {
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 20px;
 }
 
 /* HISTORY */
