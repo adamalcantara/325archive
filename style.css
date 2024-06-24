@@ -600,7 +600,15 @@ img {
     /* FOOTER */
     .site-footer {
         height: 50px;
-        font-size: 1vw;
+        font-size: 2vw;
+        justify-content: center;
+    }
+    .copyright {
+        text-align: center;
+    }
+
+    .footer-menu {
+        display: none;
     }
 }
 
