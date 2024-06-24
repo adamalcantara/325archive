@@ -361,11 +361,14 @@ img {
 .nav-links .prev{
     background-color: transparent;
 }
+.guitararchive-pagination {
+    padding-bottom: 50px;
+    border-bottom: 0.5px solid #c3c3c3;
+}
 
 /* COMMENTS AREA */
 .comments-area {
     width: 60%;
-    border-top: 0.5px solid #c3c3c3;
     margin-top: 50px;
 }
 .comments-title, .comment-reply-title {
