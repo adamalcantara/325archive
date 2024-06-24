@@ -16,7 +16,7 @@ Template Name: Other Guitar Template
                                 if( have_posts() ):
                                     while( have_posts() ) : the_post();
                                     ?>
-                                    <article class="home-blog-item">
+                                    <article class="guitar-blog-item">
                                         <h1 class="page-header"><?php the_title(); ?></h1>
                                     </article>
                                     <?php
