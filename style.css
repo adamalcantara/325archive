@@ -252,6 +252,7 @@ img {
     position: absolute;
     bottom: 0px;
     margin-left: 20px;
+    font-weight: 500;
 }
 
 /* HISTORY */
@@ -343,6 +344,13 @@ img {
     justify-content: space-between;
     margin-bottom: 20px;
 }
+.guitararchive-post-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    border-bottom: 0.5px solid #c3c3c3;
+}
 .pages {
     font-family: "Anton", sans-serif;
     text-transform: uppercase;
@@ -372,10 +380,6 @@ img {
 .nav-links .next,
 .nav-links .prev{
     background-color: transparent;
-}
-.guitararchive-pagination {
-    padding-bottom: 50px;
-    border-bottom: 0.5px solid #c3c3c3;
 }
 
 /* COMMENTS AREA */
@@ -498,6 +502,9 @@ img {
 }
 
 @media (max-width: 1000px) {
+    #content {
+        width: 80%;
+    }
     .main-menu ul li a {
         padding: 0 10px;
     }

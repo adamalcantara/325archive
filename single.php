@@ -9,7 +9,7 @@
                     get_template_part( 'parts/content', 'single' );
                     ?>
                         <!-- Pagination -->
-                        <div class="guitararchive-pagination">
+                                <div class="guitararchive-post-pagination">
                                     <div class="pages next">
                                         <?php next_post_link( '< %link' ) ?>
                                     </div>
