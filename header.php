@@ -15,7 +15,7 @@
                         <!-- Check if there is a custom logo. If there isn't, display the site name -->
                         <?php 
                         if( has_custom_logo() ) {
-                            the_custom_logo(); 
+                            the_custom_logo();
                         } else {
                             ?>
                             <a href="<?php echo home_url( '/' ) ?>"><span><?php bloginfo( 'name' ); ?></span></a>

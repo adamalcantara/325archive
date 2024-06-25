@@ -37,10 +37,17 @@ a:hover {
     text-transform: uppercase;
 }
 /* Logo */
+/* if there is a custom logo */
 .logo a {
+    display: flex;
+    align-items: center;
     font-size: 25px;
-    margin-left: 30px;
+    margin-left: 20px;
 }
+.custom-logo {
+    width: 250px;
+}
+
 /* Menu */
 .main-menu {
     display: flex;
@@ -491,7 +498,7 @@ img {
 
 @media (max-width: 1000px) {
     .main-menu ul li a {
-        padding: 0 15px;
+        padding: 0 10px;
     }
     .site-footer {
         font-size: 1.5vw;
@@ -606,6 +613,7 @@ img {
     }
     .main-blog {
         flex-direction: column;
+        width: 85%;
     }
     .the-blog-aside {
         width: 100%;
