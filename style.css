@@ -44,6 +44,9 @@ a:hover {
     font-size: 25px;
     margin-left: 20px;
 }
+.logo a:hover {
+    opacity: 65%;
+}
 .custom-logo {
     width: 250px;
     height: auto;
@@ -72,7 +75,7 @@ a:hover {
     display: block;
 }
 .main-menu ul li a:hover {
-    color: grey !important;
+    opacity: 65% !important;
 }
 /* Pop-out menu */
 .main-menu ul.sub-menu {
@@ -425,14 +428,6 @@ img {
 .comment-author {
     font-size: 20px;
 }
-/* .comment-list div:nth-child(1) {
-    font-weight: 500;
-    text-transform: uppercase;
-} */
-/* .comment-list div:nth-child(1) {
-    font-weight: 900;
-    text-transform: uppercase;
-} */
 
 /* GUITAR TEMPLATE */
 .guitar-title {
@@ -499,6 +494,9 @@ img {
     .home-blog-title {
         font-size: 3vw;
     }
+    .site-footer {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -539,7 +537,7 @@ img {
         z-index: 1;
     }
     .main-menu ul:not(.sub-menu) {
-        margin-top: 55px;
+        margin-top: 65px;
     }
     .main-menu ul li {
         display: block;
