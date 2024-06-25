@@ -496,6 +496,9 @@ img {
 
 /* Mobile media query */
 @media (max-width: 767px) {
+    #content {
+        width: 90%;
+    }
     .menu-icon, .check-button {
         display: block;
     }
@@ -608,7 +611,7 @@ img {
     }
     .sidebar {
         width: 100%;
-        padding: 10px 10px;
+        padding: 5px 0;
     }
 
     /* GUITAR TEMPLATE MEDIA QUERY */
