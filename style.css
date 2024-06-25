@@ -190,6 +190,10 @@ img {
     text-transform: uppercase;
     font-size: 25px;
 }
+.mission-widget-wrapper a {
+    color: black !important;
+    text-decoration: none;
+}
 .mission a:hover {
     background-color: #cbcbcb;
 }
