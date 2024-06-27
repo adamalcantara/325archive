@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div class="the-header-image">
-
     <img class="header-img" src="<?php header_image(); ?>" height="<?php echo absint(get_custom_header()->height ); ?>" width="<?php echo absint(get_custom_header()->width ); ?>" alt="" />
 </div>
 

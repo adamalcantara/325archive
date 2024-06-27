@@ -5,8 +5,9 @@ Template Name: General Template
 ?>
 
 <?php get_header(); ?>
-
-<img class="header-img" src="<?php header_image(); ?>" height="<?php echo absint(get_custom_header()->height ); ?>" width="<?php echo absint(get_custom_header()->width ); ?>" alt="" />
+<div class="the-header-image">
+    <img class="header-img" src="<?php header_image(); ?>" height="<?php echo absint(get_custom_header()->height ); ?>" width="<?php echo absint(get_custom_header()->width ); ?>" alt="" />
+</div>
 
         <!-- Dynamic content area -->
         <div id="content" class="site-content">
