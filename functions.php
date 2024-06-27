@@ -30,10 +30,10 @@ function guitararchive_config() {
     );
 
     $args = array(
+        'flex-width' => true,
+        'width' => 3000,
         'flex-height' => true,
         'height' => 200,
-        'flex-width' => true,
-        'width' => 3000
     );
     add_theme_support( 'custom-header', $args );
     // Theme support for custom post thumbnails

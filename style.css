@@ -112,7 +112,7 @@ a:hover {
     margin: 5px 0;
     transition: 0.4s;
 }
-img {
+img:not(.header-img) {
     max-width: 100%;
     height: auto;
 }
@@ -127,8 +127,16 @@ img {
 }
 
 /* PAGE HEADERS */
+.the-header-image {
+    width: 100% !important;
+    height: 125px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
 .header-img {
     width: 100% !important;
+    height: auto;
 }
 .page-header, .archive-title {
     font-size: 50px;
@@ -588,6 +596,9 @@ img {
     .animate-button .bar3 {
         -webkit-transform: rotate(45deg) translate(-7px, -7px);
         transform: rotate(45deg) translate(-7px, -7px);
+    }
+    .the-header-image {
+        height: 75px;
     }
 
 
