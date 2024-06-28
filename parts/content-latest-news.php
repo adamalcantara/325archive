@@ -8,5 +8,6 @@
         </h2>
         <?php the_excerpt(); ?>
     </div>
-    <p class="home-blog-date"><?php echo get_the_date(); ?></p>
+    <!-- Use the esc_html function for security purposes -->
+    <p class="home-blog-date"><?php echo esc_html( get_the_date() ); ?></p>
 </article>

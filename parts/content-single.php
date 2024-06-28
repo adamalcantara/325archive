@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header>
-        <p class="blog-date"><?php echo get_the_date(); ?></p>
+        <p class="blog-date"><?php echo esc_html( get_the_date() ); ?></p>
         <h1 class="blog-title"><?php the_title(); ?></h1>
         <div class="content">
             <?php the_content(); ?>
