@@ -4,8 +4,8 @@
         <main id="main" class="site-main">
             <div class="error-404">
                 <header>
-                    <h1 class="page-header">Page not found</h1>
-                    <p class="notfound-text">Unfortunately, the page you tried to reach does not exist on this site.</p>
+                    <h1 class="page-header"><?php _e( 'Page Not Found', 'guitararchive' ); ?></h1>
+                    <p class="notfound-text"><?php _e( 'Unfortunately, the page you tried to reach does not exist on this site.', 'guitararchive' ); ?></p>
                 </header>
                 <div class="error">
                     <div class="searchbox">
@@ -15,7 +15,7 @@
                         the_widget(
                             'WP_Widget_Recent_Posts',
                             array(
-                                'title' => 'Latest Posts',
+                                'title' => __( 'Latest Posts' ),
                                 'number' => 3
                             )
                         );

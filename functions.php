@@ -21,6 +21,10 @@ add_action( 'wp_enqueue_scripts', 'guitararchive_load_scripts' );
 
 
 function guitararchive_config() {
+
+    $textdomain = 'guitararchive';
+    load_theme_textdomain( $textdomain, get_template_directory() . '/languages/' );
+
     // Register the menus
     register_nav_menus(
         array (
