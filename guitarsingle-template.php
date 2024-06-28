@@ -24,7 +24,7 @@ Template Name: Guitar Single Template
                                     <?php
                                 endwhile;
                             else: ?>
-                                <p>Nothing yet to be displayed</p>
+                                <p><?php _e( 'There&apos;s nothing here yet!', 'guitararchive' ) ?></p>
                             <?php endif; ?>
                         </div>
                     </div>

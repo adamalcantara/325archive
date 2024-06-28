@@ -28,8 +28,8 @@ function guitararchive_config() {
     // Register the menus
     register_nav_menus(
         array (
-            'guitararchive_main_menu' => 'Main Menu',
-            'guitararchive_footer_menu' => 'Footer Menu'
+            'guitararchive_main_menu' => __( 'Main Menu', 'guitararchive' ),
+            'guitararchive_footer_menu' => __( 'Footer Menu', 'guitararchive' )
         )
     );
 
@@ -65,9 +65,9 @@ add_action( 'widgets_init', 'guitararchive_sidebars' );
 function guitararchive_sidebars(){
     register_sidebar(
         array(
-            'name' => 'Blog Sidebar',
+            'name' => __( 'Blog Sidebar', 'guitararchive' ),
             'id' => 'sidebar-blog',
-            'description' => 'This is the sidebar for the blog page.',
+            'description' => __( 'This is the sidebar for the blog page.', 'guitararchive' ),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget-title">',
@@ -76,9 +76,9 @@ function guitararchive_sidebars(){
     );
     register_sidebar(
         array(
-            'name' => 'Mission',
+            'name' => __( 'Mission', 'guitararchive' ),
             'id' => 'sidebar-mission',
-            'description' => 'This is the mission section of the home page.',
+            'description' => __( 'This is the mission section of the home page.', 'guitararchive' ),
             'before_widget' => '<div class="mission-widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget-title">',

@@ -3,7 +3,7 @@
 <div id="primary">
     <div id="main">
         <div id="content">
-            <h1>Search results for: <?php echo get_search_query(); ?></h1>
+            <h1><?php _e( 'Search results for', 'guitararchive' ); ?>: <?php echo get_search_query(); ?></h1>
             <div class="searchbox">
                 <?php get_search_form(); ?>
             </div>

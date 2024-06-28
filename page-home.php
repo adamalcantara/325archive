@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 <!-- Hero element -->
 <?php 
-$hero_title = get_theme_mod( 'set_hero_title', 'Please add a title'); 
-$hero_subtitle = get_theme_mod( 'set_hero_subtitle', 'Please add a subtitle'); 
+$hero_title = get_theme_mod( 'set_hero_title', __( 'Please add a title', 'guitararchive' ) ); 
+$hero_subtitle = get_theme_mod( 'set_hero_subtitle', __( 'Please add a subtitle', 'guitararchive' ) ); 
 $hero_button_link = get_theme_mod( 'set_hero_button_link', '#'); 
-$hero_button_text = get_theme_mod( 'set_hero_button_text', 'View The Guitars'); 
+$hero_button_text = get_theme_mod( 'set_hero_button_text', __( 'View The Guitars', 'guitararchive' ) ); 
 $hero_height = get_theme_mod( 'set_hero_height', 800 ); 
 $hero_background = wp_get_attachment_url( get_theme_mod( 'set_hero_background' ) ); 
 ?>
@@ -33,7 +33,7 @@ $hero_background = wp_get_attachment_url( get_theme_mod( 'set_hero_background' )
                     </section>
                     <!-- Home blog -->
                     <section class="home-blog">
-                            <h2 id="home-blog-header">Latest Articles</h2>
+                            <h2 id="home-blog-header"><?php _e( 'Latest Articles', 'guitararchive' ); ?></h2>
                             <div class="home-blog-items">
                                 <!-- The WordPress loop -->
                                 <?php 
@@ -52,7 +52,7 @@ $hero_background = wp_get_attachment_url( get_theme_mod( 'set_hero_background' )
                                     endwhile;
                                     wp_reset_postdata();
                                 else: ?>
-                                    <p>Nothing yet to be displayed</p>
+                                    <p><?php _e( 'There&apos;s nothing here yet!', 'guitararchive' ); ?></p>
                                 <?php endif; ?>
                             </div>
 

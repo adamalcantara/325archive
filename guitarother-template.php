@@ -22,7 +22,7 @@ Template Name: Other Guitar Template
                                     <?php
                                 endwhile;
                             else: ?>
-                                <p>Nothing yet to be displayed</p>
+                                <p><?php _e( 'There&apos;s nothing here yet!', 'guitararchive' ) ?></p>
                             <?php endif; ?>
                             <!-- The blog content for guitars -->
                             <section class="guitar-page">
@@ -45,7 +45,7 @@ Template Name: Other Guitar Template
                                         endwhile;
                                         wp_reset_postdata();
                                     else: ?>
-                                        <p>Nothing yet to be displayed</p>
+                                        <p><?php _e( 'There&apos;s nothing here yet!', 'guitararchive' ) ?></p>
                                     <?php endif; ?>
                                 </div>
                             </section>

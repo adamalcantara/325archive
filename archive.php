@@ -22,15 +22,15 @@
                                 <!-- Pagination -->
                                 <div class="guitararchive-pagination">
                                     <div class="pages new">
-                                        <?php previous_posts_link( "< Newer Posts") ?>
+                                        <?php previous_posts_link( __( "< Newer Posts", 'guitararchive' ) ); ?>
                                     </div>
                                     <div class="pages old">
-                                        <?php next_posts_link( "Older Posts >") ?>
+                                        <?php next_posts_link( __( "Older Posts >", 'guitararchive' ) ) ?>
                                     </div>
                                 </div>
                                 <?php
                             else: ?>
-                                <p>Nothing yet to be displayed</p>
+                                <p><?php _e( 'There&apos;s nothing here yet!', 'guitararchive' ) ?></p>
                             <?php endif; ?>
                         </div>
                         <div class="the-blog-aside">
