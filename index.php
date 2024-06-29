@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
 <div class="the-header-image">
-    <img class="header-img" src="<?php header_image(); ?>" height="<?php echo absint(get_custom_header()->height ); ?>" width="<?php echo absint(get_custom_header()->width ); ?>" alt="" />
+    <img class="header-img" src="<?php header_image(); ?>" height="<?php echo esc_attr( absint(get_custom_header()->height ) ); ?>" width="<?php echo esc_attr( absint(get_custom_header()->width ) ); ?>" alt="" />
 </div>
 
         <!-- Dynamic content area -->
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <h1 class="page-header"><?php _e( 'Blog', 'guitararchive' ) ?></h1>
+                    <h1 class="page-header"><?php esc_html_e( 'Blog', 'guitararchive' ) ?></h1>
                     <section class="main-blog">
                         <div class="blog-items">
                             <!-- The WordPress loop -->
@@ -21,15 +21,15 @@
                                 <!-- Pagination -->
                                 <div class="guitararchive-pagination">
                                     <div class="pages new">
-                                        <?php previous_posts_link( __( "< Newer Posts", 'guitararchive' ) ) ?>
+                                        <?php previous_posts_link( esc_html__( "< Newer Posts", 'guitararchive' ) ) ?>
                                     </div>
                                     <div class="pages old">
-                                        <?php next_posts_link( __( "Older Posts >", 'guitararchive' ) ) ?>
+                                        <?php next_posts_link( esc_html__( "Older Posts >", 'guitararchive' ) ) ?>
                                     </div>
                                 </div>
                                 <?php
                             else: ?>
-                                <p><?php _e( 'There&apos;s nothing here yet!', 'guitararchive' ) ?></p>
+                                <p><?php esc_html_e( 'There&apos;s nothing here yet!', 'guitararchive' ) ?></p>
                             <?php endif; ?>
                         </div>
                         <div class="the-blog-aside">

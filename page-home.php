@@ -8,13 +8,13 @@ $hero_button_text = get_theme_mod( 'set_hero_button_text', __( 'View The Guitars
 $hero_height = get_theme_mod( 'set_hero_height', 800 ); 
 $hero_background = wp_get_attachment_url( get_theme_mod( 'set_hero_background' ) ); 
 ?>
-<section class="hero" style="background-image: url(<?php echo $hero_background ?>)">
-    <div class="overlay" style="min-height: <?php echo $hero_height ?>px">
+<section class="hero" style="background-image: url(<?php echo esc_url( $hero_background ) ?>)">
+    <div class="overlay" style="min-height: <?php echo esc_attr( $hero_height ) ?>px">
         <div class="hero-container">
 
-                <h1><?php echo $hero_title ?></h1>
-                <p><?php echo nl2br( $hero_subtitle ) ?></p>
-                <a href="<?php echo $hero_button_link ?>"><?php echo $hero_button_text ?></a>
+                <h1><?php echo esc_html( $hero_title ); ?></h1>
+                <p><?php echo  nl2br( esc_html( $hero_subtitle ) ); ?></p>
+                <a href="<?php echo esc_url( $hero_button_link ) ?>"><?php echo esc_html( $hero_button_text ) ?></a>
 
         </div>
     </div>
@@ -33,7 +33,7 @@ $hero_background = wp_get_attachment_url( get_theme_mod( 'set_hero_background' )
                     </section>
                     <!-- Home blog -->
                     <section class="home-blog">
-                            <h2 id="home-blog-header"><?php _e( 'Latest Articles', 'guitararchive' ); ?></h2>
+                            <h2 id="home-blog-header"><?php esc_html_e( 'Latest Articles', 'guitararchive' ); ?></h2>
                             <div class="home-blog-items">
                                 <!-- The WordPress loop -->
                                 <?php 
@@ -52,7 +52,7 @@ $hero_background = wp_get_attachment_url( get_theme_mod( 'set_hero_background' )
                                     endwhile;
                                     wp_reset_postdata();
                                 else: ?>
-                                    <p><?php _e( 'There&apos;s nothing here yet!', 'guitararchive' ); ?></p>
+                                    <p><?php esc_html_e( 'There&apos;s nothing here yet!', 'guitararchive' ); ?></p>
                                 <?php endif; ?>
                             </div>
 

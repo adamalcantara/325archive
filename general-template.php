@@ -6,7 +6,7 @@ Template Name: General Template
 
 <?php get_header(); ?>
 <div class="the-header-image">
-    <img class="header-img" src="<?php header_image(); ?>" height="<?php echo absint(get_custom_header()->height ); ?>" width="<?php echo absint(get_custom_header()->width ); ?>" alt="" />
+    <img class="header-img" src="<?php header_image(); ?>" height="<?php echo esc_attr( absint(get_custom_header()->height ) ); ?>" width="<?php echo esc_attr( absint(get_custom_header()->width ) ); ?>" alt="" />
 </div>
 
         <!-- Dynamic content area -->
@@ -27,7 +27,7 @@ Template Name: General Template
                                     <?php
                                 endwhile;
                             else: ?>
-                                <p><?php _e( 'There&apos;s nothing here yet!', 'guitararchive' ) ?></p>
+                                <p><?php esc_html_e( 'There&apos;s nothing here yet!', 'guitararchive' ) ?></p>
                             <?php endif; ?>
                         </div>
                     </div>

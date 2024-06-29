@@ -7,8 +7,8 @@
                 <?php the_excerpt(); ?>
             </div>
             <div class="meta-footer">
-                <p><?php _e( 'Categories', 'guitararchive' ) ?>: <?php the_category( ' ' ) ?></p>
-                <p><?php _e( 'Tags', 'guitararchive' ) ?>: <?php the_tags( '', ', ' ); ?></p>
+                <p><?php esc_html_e( 'Categories', 'guitararchive' ) ?>: <?php the_category( ' ' ) ?></p>
+                <p><?php esc_html_e( 'Tags', 'guitararchive' ) ?>: <?php the_tags( '', ', ' ); ?></p>
             </div>
         <?php endif; ?>
     </header>
