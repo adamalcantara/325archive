@@ -29,11 +29,18 @@ Template Name: Other Guitar Template
                                 <div class="guitar-page-items">
                                     <!-- The WordPress loop -->
                                     <?php 
+
+                                    // Get values from the theme customizer
+                                    $per_other_page = get_theme_mod( 'set_per_other_page', 100 );
+                                    $page_other_include = get_theme_mod(
+                                        'set_other_guitar_id_include'
+                                    );
+
                                     $args = array(
                                         'post_type' => 'page',
-                                        'posts_per_page' => 100,
+                                        'posts_per_page' => $per_other_page,
                                         // Categories to go on homepage, and not
-                                        'post__in' => array(242),
+                                        'post__in' => explode( ",", $page_other_include),
                                         'orderby' => 'post__in',
                                         'order' => 'ASC'
                                     );

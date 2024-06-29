@@ -284,6 +284,51 @@ function guitararchive_customizer( $wp_customize ) {
             'type' => 'text'
         )
     );
+
+    // Other Guitar Template Page
+    $wp_customize->add_section(
+        'other_guitar_template',
+        array(
+            'title' => 'Other Guitar Template'
+        )
+    );
+
+    // Pages to be displayed on the Other Guitar Template Page
+    $wp_customize->add_setting(
+        'set_per_other_page',
+        array(
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'absint'
+        )
+    );
+
+    $wp_customize->add_control( 
+        'set_per_other_page', 
+        array(
+            'label' => 'Posts per page',
+            'description' => 'How many items should be displayed on the page?',			
+            'section' => 'other_guitar_template',
+            'type' => 'number'
+    ) );
+
+    // The array of pages to be displayed on the OTHER guitar page
+    $wp_customize->add_setting(
+        'set_other_guitar_id_include',
+        array(
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+
+    $wp_customize->add_control(
+        'set_other_guitar_id_include',
+        array(
+            'label' => 'Page IDs to include',
+            'description' => 'Comma separated values or single category ID',
+            'section' => 'other_guitar_template',
+            'type' => 'text'
+        )
+    );
     
 }
 

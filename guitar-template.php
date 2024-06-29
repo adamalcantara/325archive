@@ -31,12 +31,12 @@ Template Name: Guitar Template
                                     <?php 
 
                                     // Get values from the theme customizer
-                                    $per_page = get_theme_mod( 'set_per_guitar_page', 100 );
+                                    $per_guitar_page = get_theme_mod( 'set_per_guitar_page', 100 );
                                     $page_include = get_theme_mod( 'set_guitar_id_include' );
 
                                     $args = array(
                                         'post_type' => 'page',
-                                        'posts_per_page' => 100,
+                                        'posts_per_page' => $per_guitar_page,
                                         // Categories to go on homepage, and not
                                         'post__in' => explode( ",", $page_include ),
                                         'orderby' => 'post__in',
