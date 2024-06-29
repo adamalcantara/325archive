@@ -37,12 +37,18 @@ $hero_background = wp_get_attachment_url( get_theme_mod( 'set_hero_background' )
                             <div class="home-blog-items">
                                 <!-- The WordPress loop -->
                                 <?php 
+
+                                // Get values from theme customizer
+                                $per_page = get_theme_mod( 'set_per_page', 3 );
+                                $category_include = get_theme_mod( 'set_category_include' );
+                                $category_exclude = get_theme_mod( 'set_category_exclude' );
+
                                 $args = array(
                                     'post_type' => 'post',
-                                    'posts_per_page' => 3,
+                                    'posts_per_page' => $per_page,
                                     // Categories to go on homepage, and not
-                                    'category_in' => array(),
-                                    'category_not_in' => array(),
+                                    'category__in' => explode( ",", $category_include ),
+                                    'category__not_in' => explode( ",", $category_exclude ),
                                 );
     
                                 $postlist = new WP_Query( $args );
@@ -52,7 +58,7 @@ $hero_background = wp_get_attachment_url( get_theme_mod( 'set_hero_background' )
                                     endwhile;
                                     wp_reset_postdata();
                                 else: ?>
-                                    <p><?php esc_html_e( 'There&apos;s nothing here yet!', 'guitararchive' ); ?></p>
+                                    <p><?php esc_html_e( 'There is not anything here yet.', 'guitararchive' ); ?></p>
                                 <?php endif; ?>
                             </div>
 
