@@ -36,9 +36,9 @@ Template Name: Guitar Template
 
                                     $args = array(
                                         'post_type' => 'page',
-                                        'posts_per_page' => $per_guitar_page,
+                                        'posts_per_page' => esc_html( $per_guitar_page ),
                                         // Categories to go on homepage, and not
-                                        'post__in' => explode( ",", $page_include ),
+                                        'post__in' => explode( ",", esc_html( $page_include ) ),
                                         'orderby' => 'post__in',
                                         'order' => 'ASC'
                                     );

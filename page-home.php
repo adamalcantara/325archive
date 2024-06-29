@@ -45,10 +45,10 @@ $hero_background = wp_get_attachment_url( get_theme_mod( 'set_hero_background' )
 
                                 $args = array(
                                     'post_type' => 'post',
-                                    'posts_per_page' => $per_page,
+                                    'posts_per_page' => esc_html( $per_page ),
                                     // Categories to go on homepage, and not
-                                    'category__in' => explode( ",", $category_include ),
-                                    'category__not_in' => explode( ",", $category_exclude ),
+                                    'category__in' => explode( ",", esc_html( $category_include ) ),
+                                    'category__not_in' => explode( ",", esc_html( $category_exclude ) ),
                                 );
     
                                 $postlist = new WP_Query( $args );
