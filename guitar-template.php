@@ -29,11 +29,16 @@ Template Name: Guitar Template
                                 <div class="guitar-page-items">
                                     <!-- The WordPress loop -->
                                     <?php 
+
+                                    // Get values from the theme customizer
+                                    $per_page = get_theme_mod( 'set_per_guitar_page', 100 );
+                                    $page_include = get_theme_mod( 'set_guitar_id_include' );
+
                                     $args = array(
                                         'post_type' => 'page',
                                         'posts_per_page' => 100,
                                         // Categories to go on homepage, and not
-                                        'post__in' => array(136, 139, 142, 340, 145, 105, 97, 148, 99, 151, 154, 157, 160, 163, 166, 169),
+                                        'post__in' => explode( ",", $page_include ),
                                         'orderby' => 'post__in',
                                         'order' => 'ASC'
                                     );
