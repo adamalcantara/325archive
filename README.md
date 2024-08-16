@@ -23,5 +23,3 @@ adamalcantara
 Email
 
 alcantaradevelopment@gmail.com
-
-Deployed website coming soon.
